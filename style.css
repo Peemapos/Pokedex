@@ -78,7 +78,7 @@ button {
   display: inline-block;
   font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
   font-size: 16px;
-  width: 100%;
+  width: 20%;
   height: 50%;
 }
 
@@ -91,4 +91,19 @@ button {
 
 .pokedex {
     margin-top: 50px;
+}
+#dropDownContainer {
+display: flex;
+justify-content: center;
+margin-top: 50px;
+gap: 10px;
+align-items: center;
+}
+#dropDownPokeball{
+    width: 30px;
+    height: 30px;
+}
+#pikachu {
+    width: 30px;
+    height: 30px;
 }
