@@ -36,6 +36,7 @@ const getPokemonDetails = async (search) => {
     try {
         const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
         renderType(res.data)
+        console.log(res);
         inputEle.value=''
 
     } catch (err) {
@@ -51,7 +52,7 @@ const renderType = (data) => {
         const containEle = document.createElement('div')
         searchResult.appendChild(containEle)
         const imgEle = document.createElement('img')
-        imgEle.src = `https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${data.id}.svg`
+        imgEle.src = data.sprites.front_default;
         containEle.appendChild(imgEle)
         const divEleName = document.createElement('div')
         divEleName.innerText += data.name
